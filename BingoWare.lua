@@ -1,3 +1,7 @@
+
+local plr = game:GetService("Players").LocalPlayer
+if plr:IsInGroup("14217738") then
+
 -- // Start
 game.StarterGui:SetCore("SendNotification", {Title = "Bingo-Ware", Text = "Thanks for buying! Enjoy.", Icon = "rbxassetid://505845268", Duration = 10, Button1 = "Mwa"})
 local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
@@ -8,6 +12,8 @@ local win = lib:Window("Bingo-Ware",Color3.fromRGB(52, 79, 235), Enum.KeyCode.Ri
 local tab = win:Tab("Aimlock")
 
 local tab2 = win:Tab("Misc")
+
+local tab3 = win:Tab("Avatar Stuff")
 
 tab:Button("Dot Lock (Q)", function()
     lib:Notification("Dot Lock Enabeld", "Q to toggle.", "Thank :D")
@@ -141,3 +147,26 @@ tab:Button("Dot Lock (Q)", function()
         
         loadstring(game:HttpGet("https://raw.githubusercontent.com/BlurpleClub/bingo-ware/main/Speed%20glitch.lua", true))()
         end)
+
+            tab3:Button("Right Korblox (Client Sided)", function()
+                lib:Notification("Right Korblox","Right Korblox Enabled", "Okay")
+                      local ply = game.Players.LocalPlayer
+                        local chr = ply.Character
+                        chr.RightLowerLeg.MeshId = "902942093"
+                        chr.RightLowerLeg.Transparency = "1"
+                        chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+                        chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+                        chr.RightFoot.MeshId = "902942089"
+                        chr.RightFoot.Transparency = "1"
+                end)
+                
+                tab3:Button("Headless (Client Sided)", function()
+                    lib:Notification("Headless","Headless Enabled", "Okay")
+                           getgenv().game.Players.LocalPlayer.Character.Head.Transparency = 1
+                            getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
+                            getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
+                    end)
+
+    else
+        plr:kick("Funky Floppa Says YOUR NOT WHITELISTED")
+        end 
