@@ -7,6 +7,8 @@ local win = lib:Window("Bingo-Ware",Color3.fromRGB(52, 79, 235), Enum.KeyCode.Ri
 
 local tab = win:Tab("Aimlock")
 
+local tab2 = win:Tab("Misc")
+
 tab:Button("Dot Lock (Q)", function()
     lib:Notification("Dot Lock Enabeld", "Q to toggle.", "Thank :D")
     
@@ -134,7 +136,7 @@ tab:Button("Dot Lock (Q)", function()
         end)
     end)
 
-    tab:Button("Speed (M) (N)", function()
+    tab2:Button("Speed (M) (N)", function()
         lib:Notification("Speed Enabeld", "Use M to Go faster and N to slow down.", "Elp meh")
         
         loadstring(game:HttpGet("https://raw.githubusercontent.com/BlurpleClub/bingo-ware/main/Speed%20glitch.lua", true))()
